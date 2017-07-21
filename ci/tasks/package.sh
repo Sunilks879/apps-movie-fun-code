@@ -2,9 +2,9 @@
 
 set -e +x
 
-pushd attendee-service
+pushd movie-fun-service
   echo "Packaging WAR"
-  ./mvnw clean package -DskipTests
+  ./mvn clean package -DskipTests -Dmaven.test.skip=true
 popd
 
 jar_count=`find apps-movie-fun-code/target -type f -name *.war | wc -l`
