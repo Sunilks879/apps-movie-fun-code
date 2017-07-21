@@ -20,7 +20,7 @@ jobs:
 - name: build
   public: true
   plan:
-  - get: movie-fun-code
+  - get: movie-fun
     trigger: true
   - task: package
     file: apps-movie-fun-code/ci/tasks/package.yml
