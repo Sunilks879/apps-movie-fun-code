@@ -23,9 +23,9 @@ jobs:
   - get: movie-fun
     trigger: true
   - task: package
-    file: apps-movie-fun-code/ci/tasks/package.yml
+    file: movie-fun/ci/tasks/package.yml
   - put: deploy-movie-fun
     params:
-      manifest: apps-movie-fun-code/manifest.yml
+      manifest: movie-fun/manifest.yml
       path: package-output/moviefun.war
 
